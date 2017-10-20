@@ -1,0 +1,55 @@
+.section-heading
+	height: 110px
+	color: transparent
+	&:before
+		height: 60px
+		position: absolute
+		content: "Кому полезны наши услуги"
+		font-family: 'Source-Sans-Pro-Black'
+		text-transform: none
+		color:  $dark-font-color
+		font-size: 27px
+		font-weight: 700
+		line-height: 27px
+		text-align: center
+		z-index: 2
+	&_whom
+		width: 200px
+		margin:
+			top: 90px
+		&:before
+			width: 60%
+			content: "Кому полезны наши услуги"
+			left: 20%
+
+
+@media only screen and (min-width: $large-screen-width)
+	.section-heading
+		display: block
+		width: 600px
+		height: 110px
+		margin:
+			left: auto
+			right: auto
+		text-transform: uppercase
+		font-family: 'Source-Sans-Pro-Black'
+		text-align: center
+		color:	 #fbfafa
+		font-size: 150px
+		font-weight: 700
+		position: relative
+		&:before
+			width: 100%
+			left: 320px
+			font-family: 'Source-Sans-Pro-Black'
+			font-size: 35px
+			line-height: 27px
+		&_whom
+			width: 100%
+			margin:
+				top: 0
+				bottom: 50px
+			&:before
+				width: 100%
+				content: "Кому полезны наши услуги"
+				top: 60px

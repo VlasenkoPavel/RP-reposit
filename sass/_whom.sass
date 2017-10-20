@@ -1,0 +1,134 @@
+.whom
+	padding:
+		left: 20px
+		right: 20px
+	box-sizing: border-box
+	display: flex
+	flex-flow: column
+	justify-content: flex-start
+	align-items: center
+	&__l-wrapper
+		width: 100%
+		display: flex
+		flex-flow: column
+		align-items: center
+	&__if-you
+		height: auto
+		box-sizing: border-box
+		position: relative
+		&:before
+			content: ''
+			width: 15px
+			height: 345px
+			position: absolute
+			top: 82px
+			background: -webkit-linear-gradient(90deg, rgba(170, 195, 230, 0.0509804) 0%, #aac3e6 100%)
+			background: -moz-linear-gradient(90deg, rgba(170, 195, 230, 0.0509804) 0%, #aac3e6 100%)
+			background: -o-linear-gradient(90deg, rgba(170, 195, 230, 0.0509804) 0%, #aac3e6 100%)
+			background: -ms-linear-gradient(90deg, rgba(170, 195, 230, 0.0509804) 0%, #aac3e6 100%)
+			background: linear-gradient(0deg, rgba(170, 195, 230, 0.0509804) 0%, #aac3e6 100%)
+	&__text
+		margin:
+			top: 25px
+			left: 35px
+		color:  #1f1f1f
+		font:
+			size: 18px
+			weight: 700
+		line-height: 25px
+		text-align: left
+		&_bottom
+			margin:
+				left: 0
+				bottom: 23px
+			padding: 0 33px
+			box-sizing: border-box
+			margin-top: 10px
+			position: relative
+			&:before
+				content: '!'
+				font-family: 'Roboto-Black'
+				color:  #f4f477
+				font-size: 150px
+				font-weight: 700
+				position: absolute
+				left: 10px
+				top: 25px
+				z-index: -1
+		&_text-bold
+			font-family: 'Roboto-Black'
+			font:
+				size: 20px
+
+		&_hidden-in-small-scr
+			display: none
+
+	&__image
+		width: 100vw
+		height: 280px
+		background:
+			image: url("../img/bg_whom2.png"), url("../img/bg_whom.png")
+			size: 300px 246px, contain
+			repeat: no-repeat, no-repeat
+			position: center, center
+
+	&__button
+		margin: 0 auto
+
+@media only screen and (min-width: $large-screen-width)
+	.whom
+		width: 520px
+		overflow: visible
+		flex-flow: column
+		align-items: flex-start
+		&__l-wrapper
+			width: 100%
+			margin-top: 100px
+			padding: 0 113px
+			box-sizing: border-box
+			flex-flow: row wrap
+			align-content: flex-end
+
+		&__section-heading
+			margin-bottom: 50px
+
+		&__text
+			margin:
+				top: 25px
+			font:
+				size: 20px
+			&_bottom
+				width: 580px
+				margin:
+					top: 47px
+					left: 200px
+				padding: 0
+				box-sizing: border-box
+				position: relative
+				&:before
+					left: -20px
+					top: 35px
+					z-index: -1
+
+			&_hidden-in-small-scr
+				display: block
+
+		&__if-you
+			width: 480px
+			&:before
+				top: 55px
+		&__wrap
+			display: none
+		&__image
+			width: 618px
+			height: 453px
+			margin:
+				top: 330px
+				left: 0px
+			background:
+				image: url("../img/img_bottom2_normal.jpg"), url("../img/img_bottom3_normal.jpg"), url("../img/img_bottom1.jpg")
+				size: 195px 124px, 294px 124px, 618px 347px, contain
+				repeat: no-repeat, no-repeat, no-repeat
+				position: 50px 0, 200px 350px, center
+		&__button
+			margin: 0 0 0 56px

@@ -1,0 +1,350 @@
+.info
+	+angle-bg(before, true, 5deg, 5%)
+	+angle-bg(after, false, 5deg, 5%)
+	width: 100%
+	height: 3050px
+	margin-top: 250px
+	background:
+		color: #ffff71
+		image: url("../img/info_bg.png")
+		size: cover
+		position-y: -110px
+		repeat: no-repeat
+	display: flex
+	flex-flow: column
+	justify-content: flex-start
+	align-items: center
+
+	&__heading
+		display: none
+
+	&__heading-small-scr
+		height: 175px
+		width: 250px
+		display: none
+		font-family: 'Source-Sans-Pro-Black'
+		color:  $dark-font-color
+		display: flex
+		align-items: center
+		justify-content: center
+		text-align: center
+		font:
+			size: 27px
+			weight: 700
+		line-height: 33px
+
+	&__pad
+		width: 100%
+		display: flex
+		flex-flow: column
+		justify-content: flex-start
+		align-items: center
+
+	&__order
+		margin-top: 30px
+		&:first-of-type
+			margin-top: -150px
+			box-shadow: 0px 0px 25.11px 1.89px rgba(0, 0, 0, 0.25)
+
+	//&__section-heading
+
+	//&__inner-heading
+	//	&_phantom
+	//	&_editing
+
+	&__reason
+		width: 280px
+		box-sizing: border-box
+		display: flex
+		flex-flow: row wrap
+		justify-content: flex-start
+		align-items: flex-end
+		align-content: flex-end
+		background:
+			position: top
+			repeat: no-repeat
+		&_one
+			height: 920px
+			background:
+				image: url("../img/phantom_middle_small.jpg")
+		&_two
+			height: 950px
+			margin-top: 60px
+			padding-top: 234px
+			box-sizing: border-box
+			background:
+				image: url("../img/img_middle.jpg")
+				size: 281px 234px
+
+	&__reason-text
+		width: 100%
+		margin-top: 25px
+		font-family: 'Roboto-Regular'
+		color:  $dark-font-color
+		font-size: 17px
+		font-weight: 400
+		line-height: 23px
+		text-align: left
+
+	&__icon
+		display: flex
+		align-items: flex-end
+		font-family: 'Roboto-Regular'
+		color:  #1f1f1f
+		font-size: 18px
+		font-weight: 700
+		line-height: 23px
+		background:
+			position: left top
+			repeat: no-repeat
+		&_camera
+			width: 100px
+			height: 118px
+			margin:
+				top: 20px
+				right: 41px
+			background:
+				image: url("../img/camera2.png")
+				size: 67px 62px
+		&_watch
+			width: 100px
+			height: 118px
+			margin:
+				top: 28px
+			background:
+				image: url("../img/watch.png")
+				size: 55px 55px
+		&_joystick
+			width: 120px
+			height: 107px
+			margin:
+				top: 22px
+			margin-right: 20px
+			background:
+				image: url("../img/joystick.png")
+				size: 62px 47px
+		&_gear
+			width: 140px
+			height: 110px
+			margin:
+				top: 22px
+			background:
+				image: url("../img/gear.png")
+				size: 54px 56px
+		&_case
+			width: 82px
+			height: 115px
+			margin:
+				top: 22px
+				right: 58px
+			background:
+				image: url("../img/case.png")
+				size: 67px 61px
+		&_lamp
+			width: 102px
+			height: 114px
+			margin:
+				top: 22px
+			background:
+				image: url("../img/lamp.png")
+				size: 53px 58px
+		&_folder
+			width: 89px
+			height: 105px
+			margin:
+				top: 22px
+				right: 51px
+			background:
+				image: url("../img/folder.png")
+				size: 60px 55px
+		&_box
+			width: 100px
+			height: 111px
+			margin:
+				top: 22px
+			background:
+				image: url("../img/box.png")
+				size: 57px 57px
+
+
+
+@media only screen and (min-width: $large-screen-width)
+	.info
+		height: auto
+		margin-top: 0
+		padding-top: 175px
+		background:
+			color: transparent
+			image: none
+		&:before
+			content: none
+		&:after
+			content: none
+		&__heading
+			display: block
+			width: 900px
+			margin:
+				left: auto
+				right: auto
+			text-transform: uppercase
+			font-family: 'Source-Sans-Pro-Black'
+			text-align: center
+			color:	 #f9f977
+			font-size: 150px
+			font-weight: 700
+			position: relative
+			text-align: center
+			&:before
+				width: 900px
+				position: absolute
+				top: 60px
+				left: 0
+				content: "Еще две причины, чтобы выбрать нас"
+				font-family: 'Source-Sans-Pro-Black'
+				text-transform: none
+				color:  $dark-font-color
+				font-size: 35px
+				font-weight: 700
+				line-height: 27px
+				text-align: center
+				z-index: 2
+
+		&__heading-small-scr
+			display: none
+
+		&__pad
+			margin-bottom: 330px
+			box-sizing: border-box
+			display: flex
+			flex-flow: row
+			justify-content: center
+			align-items: flex-start
+
+		&__order
+			margin-top: 0
+			&:first-of-type
+				margin-right: 50px
+				margin-top: 0
+				box-shadow: none
+
+		&__l-reason-wrapper
+			width: 100%
+			padding: 0 110px
+			box-sizing: border-box
+			display: flex
+			flex-flow: row wrap
+			&_one
+				justify-content: flex-end
+			&_two
+				justify-content: flex-start
+
+		&__reason
+			width: 548px
+			display: flex
+			flex-flow: row wrap
+			justify-content: flex-start
+			align-items: flex-start
+			position: relative
+			&_one
+				height: 400px
+				margin-left: auto
+				background: none
+				&:before
+					content: '1'
+					font-family: 'Roboto-Black'
+					color:   #ffffb8
+					font-size: 402px
+					font-weight: 900
+					position: absolute
+					left: -690px
+					top: -100px
+				&:after
+					width: 554px
+					height: 408px
+					content: ''
+					background:
+						image: url('../img/phantom_middle.png')
+						size: contain
+						repeat: no-repeat
+					position: absolute
+					left: -565px
+					top: 20px
+			&_two
+				margin-top: 0
+				height: 500px
+				padding-top: 0
+				box-sizing: border-box
+				background: none
+				&:before
+					content: '2'
+					font-family: 'Roboto-Black'
+					color:   #ffffb8
+					font-size: 402px
+					font-weight: 900
+					position: absolute
+					right: -240px
+					top: -20px
+				&:after
+					width: 486px
+					height: 406px
+					content: ''
+					background:
+						image: url('../img/img_middle.jpg')
+						size: contain
+						repeat: no-repeat
+					position: absolute
+					right: -595px
+					top: 130px
+
+		&__reason-text
+			margin:
+				top: 0
+				bottom: 25px
+			font-size: 20px
+
+		&__icon
+			margin:
+				top: auto
+			display: flex
+			align-items: flex-end
+			font-family: 'Roboto-Regular'
+			color:  #1f1f1f
+			font-size: 18px
+			font-weight: 700
+			line-height: 23px
+			background:
+				position: left top
+				repeat: no-repeat
+			&_camera
+				width: 100px
+				height: 118px
+				margin:
+					right: 25px
+			&_watch
+				width: 100px
+				height: 118px
+				margin:
+					right: 25px
+			&_joystick
+				width: 120px
+				height: 107px
+				margin-right: 10px
+			&_gear
+				width: 140px
+				height: 110px
+				margin-right: 16px
+			&_case
+				width: 82px
+				height: 115px
+				margin-right: 20px
+			&_lamp
+				width: 102px
+				height: 114px
+				margin-right: 22px
+			&_folder
+				width: 89px
+				height: 105px
+				margin-right: 20px
+			&_box
+				width: 100px
+				height: 111px

@@ -1,0 +1,153 @@
+.profit
+	width: 100vw
+	height: 741px
+	position: relative
+	display: flex
+	flex-flow: column
+	align-items: center
+	box-sizing: border-box
+	padding:
+		top: 67px
+
+	&__heading
+		width: 100vw
+		text-transform: uppercase
+		font-family: 'Source-Sans-Pro-Black'
+		text-align: center
+		color:	#fafafa
+		font-size: 70px
+		font-weight: 700
+		&:before
+			width: 100vw
+			position: absolute
+			top: 90px
+			left: 0px
+			content: "Что Вы получаете?"
+			font-family: 'Source-Sans-Pro-Black'
+			text-transform: none
+			color:  $dark-font-color
+			font-size: 27px
+			font-weight: 700
+			line-height: 27px
+			text-align: center
+			z-index: 2
+
+	&__unit
+		width: 82px
+		height: 76px
+		background-color: #bad4f9
+		position: relative
+
+		&_camera
+			margin-top: 90px
+			&:before
+				content: ''
+				width: 82px
+				height: 76px
+				position: absolute
+				top: -9px
+				left: -9px
+				background:
+					image: url("../img/camera.png")
+			&:after
+				width: 160px
+				position: absolute
+				bottom: -55px
+				left: -40px
+				content: 'Видео в формате 4K + RAW'
+				font-family: 'Roboto-Regular'
+				color:  $dark-font-color
+				font-size: 18px
+				font-weight: 700
+				line-height: 23px
+				text-align: center
+
+		&_editing
+			margin-top: 90px
+			&:before
+				content: ''
+				width: 82px
+				height: 75px
+				position: absolute
+				top: -8px
+				left: -8px
+				background:
+					image: url("../img/play.png")
+			&:after
+				width: 160px
+				position: absolute
+				bottom: -55px
+				left: -50px
+				content: 'Дополнительный видеоомонтаж'
+				font-family: 'Roboto-Regular'
+				color:  $dark-font-color
+				font-size: 18px
+				font-weight: 700
+				line-height: 23px
+				text-align: center
+
+		&_action
+			margin-top: 96px
+			&:before
+				content: ''
+				width: 79px
+				height: 79px
+				position: absolute
+				top: -11px
+				left: -8px
+				background:
+					image: url("../img/action.png")
+			&:after
+				width: 120px
+				position: absolute
+				bottom: -55px
+				left: -25px
+				content: 'Экшн съемка с любого угла'
+				font-family: 'Roboto-Regular'
+				color:  $dark-font-color
+				font-size: 18px
+				font-weight: 700
+				line-height: 23px
+				text-align: center
+
+	&__price
+		width: 100vw
+		margin-top: 115px
+		font-family: 'Source-Sans-Pro-Black'
+		color:  $dark-font-color
+		font-size: 27px
+		font-weight: 700
+		line-height: 46px
+		text-align: center
+
+@media only screen and (min-width: $large-screen-width)
+
+	.profit
+		height: 400px
+		flex-flow: row wrap
+		align-content: flex-start
+
+		&__heading
+			font:
+				size: 150px
+				weight: 700
+			&:before
+				font:
+					size: 35px
+					weight: 700
+				top: 130px
+
+		&__unit
+			margin-top: 11px
+
+			&_camera
+				margin-left: auto
+
+			&_editing
+				margin:
+					left: 211px
+					right: 194px
+
+			&_action
+				margin:
+					right: auto

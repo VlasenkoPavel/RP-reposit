@@ -1,0 +1,101 @@
+.document
+	width: 100vw
+	height: 100vh
+	display: flex
+	flex-flow: column nowrap
+	justify-content: flex-start
+	align-items: center
+	overflow-y: scroll
+	-webkit-overflow-scrolling: touch
+	background:
+		color: #FFFFFF
+
+	&__wrapper-privacy,
+	&__wrapper-agreement
+		&_visible
+			width: 100vw
+			height: 100vh
+			position: fixed
+			left: 0
+			top: 0
+			display: flex
+			flex-flow: column nowrap
+			align-items: center
+			justify-content: center
+			z-index: 11
+		&_hidden
+			display: none
+
+	&__close
+		width: 20px
+		height: 20px
+		margin: 0
+		position: fixed
+		right: 3vw
+		top: 2vh
+		display: block
+		color: transparent
+		text-decoration: none
+		background:
+			image: url('../img/close.png')
+			size: contain
+			repeat: no-repeat
+
+	&__section-heading
+		width: 90vw
+		margin-bottom: 35px
+		font-family: 'Source-Sans-Pro-Bold'
+		font:
+			size: 25px
+			weight: 700
+
+	&__heading
+		width: 90vw
+		margin-bottom: 10px
+		font-family: 'Source-Sans-Pro-Bold'
+		font:
+			size: 22px
+			weight: 700
+
+	&__paragraph
+		width: 90vw
+		font-family: 'Roboto-Regular'
+		margin-bottom: 25px
+		font:
+			size: 18px
+			weight: 400
+
+
+@media only screen and (min-width: $large-screen-width)
+	.document
+		width: 80vw
+		height: 90vh
+
+		&__wrapper-privacy,
+		&__wrapper-agreement
+			&_visible
+				background-color: rgba(0,0,0,0.5)
+
+		&__close
+			margin: 0
+			position: fixed
+			right: 12vw
+			top: 8vh
+
+		&__section-heading
+			width: 750px
+			margin-bottom: 35px
+			font:
+				size: 35px
+
+		&__heading
+			width: 750px
+			margin-bottom: 10px
+			font:
+				size: 25px
+
+		&__paragraph
+			width: 750px
+			margin-bottom: 25px
+			font:
+				size: 20px

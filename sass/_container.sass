@@ -1,0 +1,43 @@
+html
+    height: 100%
+body
+    height: 100%
+.container
+    width: 100vw
+    font-family: Roboto, serif
+    display: flex
+    flex-direction: column
+    justify-content: flex-start
+    align-items: center
+    font-family: Roboto-Regular
+
+@media only screen and (min-width: $small-screen-width)
+    html
+        overflow-x: hidden
+        margin-right: calc(-1 * (100vw - 100%))
+    .container
+        min-height: 100%
+        //min-width: 900px
+        margin: 0 auto
+
+//html
+//    height: 100%
+//body
+//    height: 100%
+//.container
+//    width: 100%
+//    font-family: Lato, serif
+//    display: flex
+//    flex-direction: column
+//    align-items: center
+//    color: $very_dark_font_color
+//    background-color: $light_background_color
+//@media only screen and (min-width: $small-screen-width)
+//    html
+//        overflow-x: hidden
+//        margin-right: calc(-1 * (100vw - 100%))
+//    .container
+//        min-height: 100%
+//        min-width: 900px
+//        margin: 0 auto
+

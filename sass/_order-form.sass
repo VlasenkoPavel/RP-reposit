@@ -1,0 +1,111 @@
+.order-form
+    width: 88vw
+    max-width: 360px
+    height: auto
+    display: flex
+    flex-flow: column nowrap
+    justify-content: flex-start
+    align-items: center
+    background:
+        color: #FFFFFF
+
+    &__wrapper
+        &_visible
+            width: 100vw
+            height: 100vh
+            position: fixed
+            left: 0
+            top: 0
+            display: flex
+            flex-flow: column nowrap
+            justify-content: center
+            align-items: center
+            background-color: rgba(0,0,0,0.5)
+            z-index: 10
+        &_hidden
+            display: none
+
+    &__close
+        width: 20px
+        height: 20px
+        margin: 24px 24px 0 auto
+        background:
+            image: url('../img/close.png')
+            size: contain
+            repeat: no-repeat
+            position: right top
+
+    &__text
+        width: 240px
+        height: 71px
+        font-size: 22px
+        font-family: "Source-Sans-Pro-Bold"
+        font-weight: bold
+        line-height: 1.136em
+        text-align: center
+
+    &__input
+        width: 240px
+        height: 24px
+        margin:
+            top: 20px
+            left: auto
+            right: auto
+        text-decoration: none
+        background: none
+        border: 0
+        border-bottom: 1px solid #aac3e6
+        font-family: 'Roboto-Regular'
+        font:
+            size: 18px
+            weight: 400
+        &_incorrect
+            border: 1px solid red
+
+    &__button
+        margin:
+            top: 35px
+            bottom: 26px
+
+    &__consent
+        width: 240px
+        font-size: 13px
+        text-decoration: none
+        color: $dark-font-color
+        font-family: "Ubuntu"
+        line-height: 1.154em
+        &_agreement
+            margin-bottom: 40px
+
+@media only screen and (min-width: $large-screen-width)
+    .order-form
+        width: 394px
+        height: 486px
+            margin:
+                top: 12vw
+                left: 6vw
+        display: flex
+        flex-flow: column nowrap
+        justify-content: flex-start
+        align-items: center
+
+        &__text
+            width: 320px
+            height: 71px
+            font-size: 25px
+            line-height: 1.28em
+
+        &__input
+            width: 320px
+            height: 24px
+            margin:
+                top: 20px
+                left: auto
+                right: auto
+
+        &__consent
+            width: 320px
+            height: 73px
+
+        &__wrap
+            display: none

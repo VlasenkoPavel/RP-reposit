@@ -1,0 +1,113 @@
+.footer
+	width: 100vw
+	background-color: #323232
+	&__l-wrapper
+		width: 100vw
+		height: 202px
+		display: flex
+		flex-flow: row wrap
+		justify-content: center
+		align-content: flex-start
+		font-family: 'Roboto-Regular'
+		background-color: #323232
+		color:  #f0f0f0
+		font:
+			size: 18px
+			weight: 400
+	&__logo
+		width: 105px
+		height: 26px
+		margin:
+			top: 30px
+			left: 20px
+			right: 37px
+			bottom: 17px
+		background:
+			image: url('../img/logo_footer.png')
+			size: cover
+			repeat: no-repeat
+	&__tel
+		color: white
+		margin:
+			top: 36px
+			bottom: 24px
+	&__document-link
+		width: 100vw
+		height: 36px
+		display: flex
+		flex-flow: column
+		justify-content: center
+		align-items: center
+		text-decoration: none
+		color: inherit
+		font:
+			size: 14px
+			weight: 400
+		text-decoration: none
+		&_agreement
+			color: #f9e21b
+
+
+	&__copyright
+		margin-top: 10px
+		width: 200px
+		height: 40px
+		font:
+			size: 12px
+		font:
+			weight: 400
+		color: inherit
+		text-align: center
+		line-height: 15px
+
+@media only screen and (min-width: $large-screen-width)
+	.footer
+		width: 100%
+		height: 162px
+		display: flex
+		flex-flow: column
+		justify-content: center
+		align-items: center
+		&__l-wrapper
+			width: 1140px
+			display: flex
+			flex-flow: row wrap
+			justify-content: flex-start
+			align-content: flex-start
+			font-family: 'Roboto-Regular'
+		&__logo
+			width: 137px
+			height: 34px
+			margin: 46px 140px 0 0
+			order: 0
+		&__tel
+			color: white
+			margin: 55px 0 0 auto
+			order: 3
+		&__document-link
+			width: auto
+			height: auto
+			margin: 56px 10px 0 10px
+			text-decoration: none
+			color: white
+			display: flex
+			flex-flow: row nowrap
+			justify-content: space-between
+			font:
+				size: 18px
+			&_privacy
+				order: 1
+			&_agreement
+				order: 2
+				color: #f9e21b
+
+		&__copyright
+			margin:
+				top: 20px
+				left: auto
+				right: auto
+			width: 450px
+			height: auto
+			font:
+				size: 18px
+			order: 4

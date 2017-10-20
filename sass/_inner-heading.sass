@@ -1,0 +1,79 @@
+.inner-heading
+	position: relative
+	display: flex
+	justify-content: flex-start
+	align-items: center
+	font-family: 'Source-Sans-Pro-Bold'
+	text-align: left
+	font:
+		size: 22px
+		weight: 700
+	line-height: 26px
+	&_phantom
+		width: 98px
+		height: 44px
+		border-bottom: 1px solid $dark-font-color
+		overflow: visible
+		&:before
+			content: '1'
+			font-family: 'Roboto-Black'
+			color:  #ffffff
+			font-size: 68px
+			font-weight: 900
+			transform: scaleX(1.1023)
+			position: absolute
+			top: -280px
+			left: 10px
+	&_editing
+		height: 100px
+		width: 98px
+		border-bottom: 1px solid $dark-font-color
+		overflow: visible
+		&:before
+			content: '2'
+			font-family: 'Roboto-Black'
+			color:  #ffffff
+			font-size: 68px
+			font-weight: 900
+			transform: scaleX(1.1023)
+			position: absolute
+			top: -260px
+			left: 10px
+	&_big-scr
+		display: none
+
+	&_if-you
+	&_contact
+		width: 280px
+
+@media only screen and (min-width: $large-screen-width)
+	.inner-heading
+		color:  $dark-font-color
+		font-size: 25px
+		&_phantom
+			margin-bottom: 20px
+			height: 50px
+			width: 100px
+			//border-bottom: 1px solid $dark-font-color
+			//overflow: visible
+			&:before
+				content: ''
+		&_contact
+			width: 451px
+			font-size: 20px
+		&_editing
+			height: 50px
+			width: 100px
+			display: flex
+			text-align: center
+			margin-bottom: 20px
+			&:before
+				content: ''
+		&__nowrapp
+			display: inline
+		&__wrapp
+			display: none
+		&_big-scr
+			display: block
+		&_small-scr
+			display: none

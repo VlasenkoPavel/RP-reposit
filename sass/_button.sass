@@ -1,0 +1,63 @@
+.button
+	+slope(-10deg)
+	width: 265px
+	height: 62px
+	display: flex
+	box-sizing: border-box
+	//padding-left: 31px
+	justify-content: center
+	//align-items: center
+	background-color:  $yellow-bgc
+	box-shadow: 0px 0px 21px 0px rgba(39, 35, 1, 0.33)
+	transition: box-shadow 0.1s
+	font-family: 'Source-Sans-Pro-Black'
+	color:  #1f1f1f
+	text-decoration: none
+	font:
+		size: 25px
+		weight: 900
+	line-height: 60px
+	text-align: left
+	&_order
+		width: 235px
+		height: 43px
+		font:
+			size: 22px
+		line-height: 45px
+
+	&_order-form
+		width: 220px
+		height: 50px
+		border: 0
+		box-shadow: none
+
+	&_submit
+		+slope(10deg)
+		width: 100%
+		color: transparent
+		border: 0
+		font-family: inherit
+		color:  inherit
+		background-color: transparent
+		text-decoration: none
+		text-align: left
+		outline: none
+		font:
+			size: 25px
+			weight: 900
+
+	&__text
+		+slope(10deg)
+	&:focus
+		box-shadow: 0px 0px 21px 0px #f9e21b
+		transition: box-shadow 0.1
+
+@media only screen and (min-width: $large-screen-width)
+	.button
+		&_order-form
+			width: 320px
+			height: 80px
+			border: 0
+		&:hover
+			box-shadow: 0px 0px 21px 0px #f9e21b
+			transition: box-shadow 0.1s

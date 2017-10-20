@@ -1,0 +1,184 @@
+$small-screen-width: 320px
+$large-screen-width: 1200px
+$main-width: 1366px
+
+$dark-font-color:  #1f1f1f
+$white-font-color: #ffffff
+$yellow-fc: #f9e21b
+
+$yellow-bgc: #f9e21b
+@mixin associated-height($h)
+    height: $h / 1140px * $inner_width
+    max-height: $h
+    min-height: $h / 1140px * $min_inner_width
+
+@mixin right-radius($r)
+    border-top-right-radius: $r
+    border-bottom-right-radius: $r
+
+@mixin left-radius($r)
+    border-top-left-radius: $r
+    border-bottom-left-radius: $r
+
+=hidden
+    left: -9999px
+    opacity: 0
+    position: absolute
+    z-index: 3
+
+=slope($degree)
+    -webkit-transform: skewX($degree)
+    -moz-transform: skewX($degree)
+    -ms-transform: skewX($degree)
+    -o-transform: skewX($degree)
+    transform: skewX($degree)
+
+// mixin
+@mixin angle($pseudo, $flip: false, $angle: 7deg, $height: 50%)
+    // Possible values for $pseudo are: before, after, both
+    @if $pseudo == 'before' or $pseudo == 'after' or $pseudo == 'both'
+        position: relative
+        z-index: 1
+        $selector: if($pseudo == 'both', '&:before,&:after', '&:#{$pseudo}')
+
+        #{$selector}
+            background:
+                color: inherit
+            content: ''
+            display: block
+            height: $height
+            left: 0
+            position: absolute
+            right: 0
+            z-index: -1
+            -webkit-backface-visibility: hidden // for Chrome Windows
+
+        @if $pseudo == 'before'
+            #{$selector}
+                top: 0
+
+                @if $flip
+                    transform: skewY($angle * -1)
+                    transform-origin: 0 0
+                @else
+                    transform: skewY($angle)
+                    transform-origin: 100% 0
+
+        @if $pseudo == 'after'
+            #{$selector}
+                bottom: 0
+
+                @if $flip
+                    transform: skewY($angle)
+                    transform-origin: 0 100%
+                @else
+                    transform: skewY($angle * -1)
+                    transform-origin: 100%
+
+        @if $pseudo == 'both'
+            &:before
+                top: 0
+
+                @if $flip
+                    transform: skewY($angle * -1)
+                    transform-origin: 0 0
+                @else
+                    transform: skewY($angle)
+                    transform-origin: 100% 0
+
+            &:after
+                bottom: 0
+
+                @if $flip
+                    transform: skewY($angle)
+                    transform-origin: 0 0
+                @else
+                    transform: skewY($angle * -1)
+                    transform-origin: 100%
+
+@mixin angle-bg($pseudo, $flip: false, $angle: 7deg, $height: 50%)
+    // Possible values for $pseudo are: before, after, both
+    @if $pseudo == 'before' or $pseudo == 'after' or $pseudo == 'both'
+        position: relative
+        z-index: 1
+        $selector: if($pseudo == 'both', '&:before,&:after', '&:#{$pseudo}')
+
+        #{$selector}
+            background: inherit
+            content: ''
+            display: block
+            height: $height
+            left: 0
+            position: absolute
+            right: 0
+            z-index: -1
+            -webkit-backface-visibility: hidden // for Chrome Windows
+
+        @if $pseudo == 'before'
+            #{$selector}
+                top: 0
+
+                @if $flip
+                    transform: skewY($angle * -1)
+                    transform-origin: 0 0
+                @else
+                    transform: skewY($angle)
+                    transform-origin: 100% 0
+
+        @if $pseudo == 'after'
+            #{$selector}
+                bottom: 0
+
+                @if $flip
+                    transform: skewY($angle)
+                    transform-origin: 0 100%
+                @else
+                    transform: skewY($angle * -1)
+                    transform-origin: 100%
+
+        @if $pseudo == 'both'
+            &:before
+                top: 0
+
+                @if $flip
+                    transform: skewY($angle * -1)
+                    transform-origin: 0 0
+                @else
+                    transform: skewY($angle)
+                    transform-origin: 100% 0
+
+            &:after
+                bottom: 0
+
+                @if $flip
+                    transform: skewY($angle)
+                    transform-origin: 0 0
+                @else
+                    transform: skewY($angle * -1)
+                    transform-origin: 100%
+// slanted edges here
+//.edge--bottom
+//    @include angle(after)
+//
+//.edge--bottom--reverse
+//    @include angle(after, true)
+//
+//.edge--top
+//    @include angle(before)
+//
+//.edge--top--reverse
+//    @include angle(before, true)
+//
+//.edge--both
+//    @include angle(both)
+//
+//.edge--both--reverse
+//    @include angle(both, true)
+
+=font-face($family, $path, $svg, $weight: normal, $style: normal)
+    @font-face
+        font-family: $family
+        src: url('#{$path}.eot')
+        src: url('#{$path}.eot?#iefix') format('embedded-opentype'), url('#{$path}.woff') format('woff'), url('#{$path}.ttf') format('truetype'), url('#{$path}.svg##{$svg}') format('svg')
+        font-weight: $weight
+        font-style: $style

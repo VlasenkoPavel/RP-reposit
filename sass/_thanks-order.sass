@@ -1,0 +1,65 @@
+.thanks-order
+	width: 88vw
+	max-width: 360px
+	height: 468px
+	//margin:
+	//	top: 12vw
+	//	left: 6vw
+	display: flex
+	flex-flow: column nowrap
+	justify-content: flex-start
+	align-items: center
+	background:
+		color: #fdee66
+		image: url('../img/car.png')
+		size: 192px 159px
+		repeat: no-repeat
+		position: center 217px
+
+	&__wrapper
+		&_visible
+			width: 100vw
+			height: 100vh
+			position: fixed
+			left: 0
+			top: 0
+			display: flex
+			flex-flow: column nowrap
+			justify-content: center
+			align-items: center
+			background-color: rgba(0,0,0,0.5)
+			z-index: 10
+		&_hidden
+			display: none
+
+	&__close
+		width: 20px
+		height: 20px
+		margin: 24px 24px 0 auto
+		background:
+			image: url('../img/close.png')
+			size: contain
+			repeat: no-repeat
+			position: right top
+
+	&__text
+		width: 200px
+		height: 71px
+		margin-top: 58px
+		font-size: 22px
+		font-family: "Source-Sans-Pro-Bold"
+		color: $dark-font-color
+		font-weight: bold
+		line-height: 1.136em
+		text-align: center
+
+@media only screen and (min-width: $large-screen-width)
+	.thanks-order
+		width: 394px
+		height: 486px
+
+		&__text
+			width: 300px
+			height: 71px
+			font-size: 22px
+			line-height: 1.136em
