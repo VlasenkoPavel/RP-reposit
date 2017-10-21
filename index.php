@@ -1,7 +1,7 @@
 <?php
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
-    $adress = 'psvlasenko@gmail.com';
+    $adress = 'rean.krasmed@mail.ru';
     $subject = 'Cъемка с квадрокоптера';
     $name = $_POST['name'] ? $_POST['name'] : 'Аноним';
     $phone = $_POST['phone'] ? $_POST['phone'] : 'не указан';
