@@ -2,15 +2,11 @@
 $(document).ready(function () {
 
     let controller = new MainController();
-    // let buttonPrivacy = document.querySelector(' [class*="footer__document-link footer__document-link_privacy"] ');
-    // let buttonAgreement = document.querySelector(' [class*="footer__document-link footer__document-link_agreement"] ');
     let buttonsPrivacyArr = document.querySelectorAll(' [name="privacyCaller"] ');
     let buttonsAgreementArr = document.querySelectorAll(' [name="agreementCaller"] ');
 
     let formCallButtons = document.querySelectorAll(' [name*="formCaller"] ');
     let formDocumentLinkArr = document.querySelectorAll(' [class*="order-form__consent"] ');
-    // console.log (buttonsPrivacyArr);
-
 
     formDocumentLinkArr.forEach(function(button) {
         button.addEventListener("click", function () {
@@ -52,14 +48,6 @@ $(document).ready(function () {
             controller.callElem('order-form__wrapper');
         });
     });
-
-    // buttonPrivacy.addEventListener("click", function () {
-    //     controller.callElem('document__wrapper-privacy');
-    // });
-    //
-    // buttonAgreement.addEventListener("click", function () {
-    //     controller.callElem('document__wrapper-agreement');
-    // });
 
     let buttonsCLosesArr = document.querySelectorAll('[class$="close"]');
     buttonsCLosesArr.forEach(
@@ -161,8 +149,8 @@ $(document).ready(function () {
     function Validator () {
 
         let regEmail = /^([a-z0-9_-]+\.)*[a-z0-9_-]+@[a-z0-9_-]+(\.[a-z0-9_-]+)*\.[a-z]{2,6}$/i;
-        let regTel = /^(\+7\d\d\d\d\d\d\d\d\d\d)$/;
-        let regName = /(^([A-Z][a-z]+)$)|(^([А-Я][а-я]+)$)/;
+        let regTel = /^(\+7|8)\d\d\d\d\d\d\d\d\d\d$/;
+        let regName = /(^([A-z]+)$)|(^([А-я]+)$)/;
 
         function validate(elem) {
             if (!elem) {
