@@ -13,12 +13,14 @@
         &_visible
             width: 100vw
             height: 100vh
+            padding-top: 3vh
+            box-sizing: border-box
             position: fixed
             left: 0
             top: 0
             display: flex
             flex-flow: column nowrap
-            justify-content: center
+            justify-content: flex-start
             align-items: center
             background-color: rgba(0,0,0,0.5)
             z-index: 10
@@ -26,9 +28,9 @@
             display: none
 
     &__close
-        width: 20px
-        height: 20px
-        margin: 24px 24px 0 auto
+        width: 18px
+        height: 18px
+        margin: 15px 15px 0 auto
         background:
             image: url('../img/close.png')
             size: contain
@@ -48,7 +50,7 @@
         width: 240px
         height: 24px
         margin:
-            top: 20px
+            top: 17px
             left: auto
             right: auto
         text-decoration: none
@@ -64,8 +66,8 @@
 
     &__button
         margin:
-            top: 35px
-            bottom: 26px
+            top: 25px
+            bottom: 20px
 
     &__consent
         width: 240px
@@ -75,7 +77,7 @@
         font-family: "Ubuntu"
         line-height: 1.154em
         &_agreement
-            margin-bottom: 40px
+            margin-bottom: 25px
 
 @media only screen and (min-width: $large-screen-width)
     .order-form
