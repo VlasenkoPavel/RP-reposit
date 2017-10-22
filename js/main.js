@@ -1,12 +1,11 @@
 'use strict';
 $(document).ready(function () {
 
-    let controller = new MainController();
-    let buttonsPrivacyArr = document.querySelectorAll(' [name="privacyCaller"] ');
-    let buttonsAgreementArr = document.querySelectorAll(' [name="agreementCaller"] ');
-
-    let formCallButtons = document.querySelectorAll(' [name*="formCaller"] ');
-    let formDocumentLinkArr = document.querySelectorAll(' [class*="order-form__consent"] ');
+    var controller = new MainController();
+    var buttonsPrivacyArr = document.querySelectorAll(' [name="privacyCaller"] ');
+    var buttonsAgreementArr = document.querySelectorAll(' [name="agreementCaller"] ');
+    var formCallButtons = document.querySelectorAll(' [name*="formCaller"] ');
+    var formDocumentLinkArr = document.querySelectorAll(' [class*="order-form__consent"] ');
 
     formDocumentLinkArr.forEach(function(button) {
         button.addEventListener("click", function () {
@@ -49,7 +48,7 @@ $(document).ready(function () {
         });
     });
 
-    let buttonsCLosesArr = document.querySelectorAll('[class$="close"]');
+    var buttonsCLosesArr = document.querySelectorAll('[class$="close"]');
     buttonsCLosesArr.forEach(
         function (button) {
             button.addEventListener("click", controller.closeForm);
@@ -57,17 +56,17 @@ $(document).ready(function () {
     );
 
     $(".order-form").submit(function() {
-        let validator = new Validator();
-        let inputArr = $(this).find('input[class*=order-form__input]');
-        let results = [];
-        let formData =[];
+        var validator = new Validator();
+        var inputArr = $(this).find('input[class*=order-form__input]');
+        var results = [];
+        var formData =[];
 
         inputArr.each(function (num) {
             console.log (inputArr[num].value);
             results.push( validator.validate(inputArr[num]) );
         });
 
-        for (let i = 0; i < inputArr.length; i++) {
+        for (var i = 0; i < inputArr.length; i++) {
             if (!results[i]) {
                 // console.log(results[i]);
                 return false;
@@ -107,12 +106,12 @@ $(document).ready(function () {
     });
 
     $(".contact").submit(function() {
-        let validator =  new Validator();
-        let inputTel = $(this).find('input[name*=phone]')[0];
+        var validator =  new Validator();
+        var inputTel = $(this).find('input[name*=phone]')[0];
         // console.log (inputTel);
-        let formData =[];
+        var formData =[];
 
-        let result = validator.validate(inputTel);
+        var result = validator.validate(inputTel);
         // console.log (result);
 
         if (!result) {
@@ -148,9 +147,9 @@ $(document).ready(function () {
 
     function Validator () {
 
-        let regEmail = /^([a-z0-9_-]+\.)*[a-z0-9_-]+@[a-z0-9_-]+(\.[a-z0-9_-]+)*\.[a-z]{2,6}$/i;
-        let regTel = /^(\+7|8)\d\d\d\d\d\d\d\d\d\d$/;
-        let regName = /(^([A-z]+)$)|(^([А-я]+)$)/;
+        var regEmail = /^([a-z0-9_-]+\.)*[a-z0-9_-]+@[a-z0-9_-]+(\.[a-z0-9_-]+)*\.[a-z]{2,6}$/i;
+        var regTel = /^(\+7|8)\d\d\d\d\d\d\d\d\d\d$/;
+        var regName = /(^([A-z]+)$)|(^([А-я]+)$)/;
 
         function validate(elem) {
             if (!elem) {
@@ -158,17 +157,17 @@ $(document).ready(function () {
             }
             if (elem.name == 'name') {
 
-                let result = testRegExp(regName, elem)
+                var result = testRegExp(regName, elem)
                 return result
 
             } else if (elem.name == 'e-mail') {
 
-                let result = testRegExp(regEmail, elem)
+                var result = testRegExp(regEmail, elem)
                 return result
 
             } else if (elem.name == 'phone') {
 
-                let result = testRegExp(regTel, elem)
+                var result = testRegExp(regTel, elem)
                 return result
             }
             return false
@@ -189,11 +188,11 @@ $(document).ready(function () {
     }
 
     function MainController () {
-        let еlemClassName = '';
+        var еlemClassName = '';
 
         function callElem(className) {
-            let hiddenClassName = className + '_hidden';
-            let visibleClassName = className + '_visible';
+            var hiddenClassName = className + '_hidden';
+            var visibleClassName = className + '_visible';
             // console.log (hiddenClassName);
 
             if (event) {
@@ -205,7 +204,7 @@ $(document).ready(function () {
 
         function closeForm() {
             // console.log ('closeForm');
-            let elem = document.querySelector('[class$="visible"]');
+            var elem = document.querySelector('[class$="visible"]');
             // console.log (elem);
             // console.log (visibleElemClassName);
             elem.className = еlemClassName;
@@ -218,7 +217,7 @@ $(document).ready(function () {
         function changeClassName(name, newName, num) {
             еlemClassName = name;
             // console.log(еlemClassName);
-            let elem = document.getElementsByClassName(name)[num];
+            var elem = document.getElementsByClassName(name)[num];
             elem.className = newName;
             // console.log(newName);
         }
