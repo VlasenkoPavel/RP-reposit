@@ -246,7 +246,7 @@ body {
     color: inherit;
     background-color: transparent;
     text-decoration: none;
-    text-align: left;
+    text-align: center;
     outline: none;
     font-size: 25px;
     font-weight: 900; }
@@ -258,7 +258,7 @@ body {
     transform: skewX(10deg); }
   .button:focus {
     box-shadow: 0px 0px 21px 0px #f9e21b;
-    transition: box-shadow 0.1; }
+    transition: box-shadow 0.1s; }
 
 @media only screen and (min-width: 1200px) {
   .button_order-form {
@@ -267,7 +267,9 @@ body {
     border: 0; }
   .button:hover {
     box-shadow: 0px 0px 21px 0px #f9e21b;
-    transition: box-shadow 0.1s; } }
+    transition: box-shadow 0.1s; }
+  .button_submit {
+    text-align: center; } }
 .main {
   width: 100%;
   flex: 1;
@@ -329,10 +331,10 @@ body {
         left: -9px;
         background-image: url("../img/camera.png"); }
       .profit__unit_camera:after {
-        width: 160px;
+        width: 170px;
         position: absolute;
         bottom: -55px;
-        left: -40px;
+        left: -45px;
         content: "Видео в формате 4K + RAW";
         font-family: "Roboto-Regular";
         color: #1f1f1f;
@@ -354,7 +356,7 @@ body {
         width: 160px;
         position: absolute;
         bottom: -55px;
-        left: -50px;
+        left: -45px;
         content: "Дополнительный видеоомонтаж";
         font-family: "Roboto-Regular";
         color: #1f1f1f;
@@ -373,10 +375,10 @@ body {
         left: -8px;
         background-image: url("../img/action.png"); }
       .profit__unit_action:after {
-        width: 120px;
+        width: 140px;
         position: absolute;
         bottom: -55px;
-        left: -25px;
+        left: -35px;
         content: "Экшн съемка с любого угла";
         font-family: "Roboto-Regular";
         color: #1f1f1f;
@@ -877,7 +879,7 @@ body {
     width: 200px;
     margin-top: 90px; }
     .section-heading_whom:before {
-      width: 60%;
+      width: 70%;
       content: "Кому полезны наши услуги";
       left: 20%; }
 
@@ -1490,12 +1492,14 @@ body {
   .thanks-order__wrapper_visible {
     width: 100vw;
     height: 100vh;
+    padding-top: 3vh;
+    box-sizing: border-box;
     position: fixed;
     left: 0;
     top: 0;
     display: flex;
     flex-flow: column nowrap;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     background-color: rgba(0, 0, 0, 0.5);
     z-index: 10; }
@@ -1541,21 +1545,23 @@ body {
   .order-form__wrapper_visible {
     width: 100vw;
     height: 100vh;
+    padding-top: 3vh;
+    box-sizing: border-box;
     position: fixed;
     left: 0;
     top: 0;
     display: flex;
     flex-flow: column nowrap;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     background-color: rgba(0, 0, 0, 0.5);
     z-index: 10; }
   .order-form__wrapper_hidden {
     display: none; }
   .order-form__close {
-    width: 20px;
-    height: 20px;
-    margin: 24px 24px 0 auto;
+    width: 18px;
+    height: 18px;
+    margin: 15px 15px 0 auto;
     background-image: url("../img/close.png");
     background-size: contain;
     background-repeat: no-repeat;
@@ -1571,7 +1577,7 @@ body {
   .order-form__input {
     width: 240px;
     height: 24px;
-    margin-top: 20px;
+    margin-top: 17px;
     margin-left: auto;
     margin-right: auto;
     text-decoration: none;
@@ -1584,8 +1590,8 @@ body {
     .order-form__input_incorrect {
       border: 1px solid red; }
   .order-form__button {
-    margin-top: 35px;
-    margin-bottom: 26px; }
+    margin-top: 25px;
+    margin-bottom: 20px; }
   .order-form__consent {
     width: 240px;
     font-size: 13px;
@@ -1594,7 +1600,7 @@ body {
     font-family: "Ubuntu";
     line-height: 1.154em; }
     .order-form__consent_agreement {
-      margin-bottom: 40px; }
+      margin-bottom: 25px; }
 
 @media only screen and (min-width: 1200px) {
   .order-form {
