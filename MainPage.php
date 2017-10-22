@@ -171,7 +171,7 @@
         <p class="order-form__text">После отправки ожидайте звонка  в течение 10 минут</p>
         <input type="hidden" name="price" class="order-form__price">
         <input type="text" name="name" class="order-form__input" placeholder="Имя">
-        <input type="email" name="e-mail" class="order-form__input" placeholder="E-mail">
+        <input type="text" name="e-mail" class="order-form__input" placeholder="E-mail">
         <input type="tel" name="phone" class="order-form__input" placeholder="Телефон">
         <div class="button button_order-form order-form__button"><input class="button_submit" type="submit" value="Отправить"></div>
         <a href="" name="privacyCaller" class="order-form__consent">
@@ -220,8 +220,7 @@
         </p>
         <p class="document__paragraph">
             Администрация имеет право:
-            - по своему усмотрению и необходимости создавать, изменять,
-            отменять правила
+            - по своему усмотрению и необходимости создавать, изменять, отменять правила
             - ограничивать доступ к любой информации на сайте
             - создавать, изменять, удалять инфо рмацию
         </p>
